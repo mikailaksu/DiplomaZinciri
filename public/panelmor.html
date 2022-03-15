@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Bulma CSS - ICO | Krypton</title>
+
+    <link rel="icon" type="image/png" href="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/css/app.css">
+    <link rel="stylesheet" type="text/css" href="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/css/main.css">
+</head>
+
+<body>
+
+    <div id="pageloader" class="pageloader is-left-to-right is-theme"></div>
+    <div id="infraloader" class="infraloader is-active"></div>    
+    <!-- Landing page Hero -->
+    <section class="hero is-fullheight has-big-dark-gradient">
+        <div class="hero-head">
+    
+            <!-- Cloned navbar -->
+            <!-- Cloned navbar that comes in on scroll -->
+            <nav x-data="initNavbar()"  x-on:scroll.window="scroll()" id="navbar-clone" class="navbar is-fixed is-dark" :class="{
+                    'is-active': scrolled,
+                    '': !scrolled
+                }">
+                <div class="container">
+                    <!-- Brand -->
+                    <div class="navbar-brand">
+                        <a href="index.html" class="navbar-item">
+                            <img class="rotating" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/logo/krypton-gradient.svg" alt="">
+                            <span class="brand-name">Krypton</span>
+                        </a>
+                        <!-- Responsive toggle -->
+                        <div class="navbar-burger" @click="openMobileMenu()">
+                            <div class="menu-toggle">
+                                <span class="icon-box-toggle" :class="{
+                                        'active': mobileOpen,
+                                        '': !mobileOpen
+                                    }">
+                                    <span class="rotate">
+                                        <i class="icon-line-top"></i>
+                                        <i class="icon-line-center"></i>
+                                        <i class="icon-line-bottom"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu -->
+                    <div id="cloneNavbarMenu" class="navbar-menu" :class="{
+                            'is-active': mobileOpen,
+                            '': !mobileOpen
+                        }">
+                        <div class="navbar-end">
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="token.html">Token</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="ico.html">Ico</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="roadmap.html">Roadmap</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="blog.html">Media</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="#" target="_blank">
+                                    <img class="telegram" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/logo/telegram.svg" alt="">
+                                    Telegram
+                                </a>
+                            </div>
+                            <!-- Sign up -->
+                            <div class="navbar-item is-nav-link">
+                                <a href="#" class="button k-button k-primary raised has-gradient slanted">
+                                    <span class="text">Register</span>
+                                    <span class="front-gradient"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- /Cloned navbar -->
+            <!-- Static navbar -->
+            <!-- Static navbar -->
+            <nav x-data="initNavbar()" class="navbar is-light" :class="{
+                    'is-dark-mobile': mobileOpen,
+                    '': !mobileOpen
+                }">
+                <div class="container">
+                    <!-- Brand -->
+                    <div class="navbar-brand">
+                        <a href="index.html" class="navbar-item">
+                            <img class="rotating" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/logo/krypton.svg" alt="">
+                            <span class="brand-name">Krypton</span>
+                        </a>
+                        <!-- Responsive toggle -->
+                        <div class="navbar-burger" @click="openMobileMenu()">
+                            <div class="menu-toggle">
+                                <span class="icon-box-toggle" :class="{
+                                        'active': mobileOpen,
+                                        '': !mobileOpen
+                                    }">
+                                    <span class="rotate">
+                                        <i class="icon-line-top"></i>
+                                        <i class="icon-line-center"></i>
+                                        <i class="icon-line-bottom"></i>
+                                    </span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Menu -->
+                    <div id="navbarMenu" class="navbar-menu light-menu" :class="{
+                            'is-active': mobileOpen,
+                            '': !mobileOpen
+                        }">
+                        <div class="navbar-end">
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="token.html">Token</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="ico.html">Ico</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="roadmap.html">Roadmap</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="blog.html">Media</a>
+                            </div>
+                            <!-- Menu item -->
+                            <div class="navbar-item is-nav-link">
+                                <a class="is-centered-responsive" href="#" target="_blank">
+                                    <img class="telegram" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/logo/telegram.svg" alt="">
+                                    Telegram
+                                </a>
+                            </div>
+                            <!-- Sign up -->
+                            <div class="navbar-item">
+                                <a href="#" class="button k-button k-primary raised has-gradient slanted">
+                                    <span class="text">Register</span>
+                                    <span class="front-gradient"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <!-- /Static navbar -->
+        </div>
+    
+        <!-- Hero Image and Title -->
+        <div class="hero-body">
+											    <div id="root"></div>
+
+        </div>
+    
+        <!-- Hero footer -->
+        <div class="hero-foot">
+            <div class="container">
+                <div class="tabs is-centered">
+                    <!-- Client / partner list -->
+                    <ul>
+                        <li><a><img class="hero-logo" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/clients/cryptomarket.svg" alt=""></a></li>
+                        <li><a><img class="hero-logo" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/clients/bitit.svg" alt=""></a></li>
+                        <li><a><img class="hero-logo" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/clients/coin.svg" alt=""></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Landing page Hero -->
+    <footer class="krypton-footer">
+        <div class="container">
+            <!-- Logo -->
+            <div class="footer-logo">
+                <a href="#">
+                    <img class="rotating" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/logo/krypton-gradient.svg" alt="">
+                    <div class="brand-name">Krypton</div>
+                    <div class="brand-subtitle">Blockchain brought to another level</div>
+                </a>
+            </div>
+            
+            <!-- Columns -->
+            <div class="columns footer-columns is-vcentered">
+                <div class="column is-4">
+                    <!-- Links group -->
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">Token</a>
+                        </li>
+    
+                        <li>
+                            <a href="#">ICO</a>
+                        </li>
+    
+                        <li>
+                            <a href="#">Roadmap</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Newsletter -->
+                <div class="column is-4">
+                    <div class="subscribe-block">
+                        <form>
+                            <!-- Field -->
+                            <div class="control">
+                                <!-- Special input -->
+                                <input class="krypton-subscribe-input" type="email" name="email" placeholder="">
+                                <button class="subscribe-button">
+                                    <span>Subscribe</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Links group -->
+                <div class="column is-4">
+                    <ul class="footer-links">
+                        <li>
+                            <a href="#">Register</a>
+                        </li>
+    
+                        <li>
+                            <a href="#">Media</a>
+                        </li>
+    
+                        <li>
+                            <a href="#">Telegram</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Copyright -->
+            <p class="k-copyright">© 2018-2021 | Krypton. All Rights Reserved</p>
+            <br>
+            <!-- Made by -->
+            <p class="coded-by">
+                Crafted by <a href="https://cssninja.io" target="_blank">Css Ninja</a> 
+                on top of <a href="https://bulma-css.com" target="_blank">Bulma CSS</a>.
+            </p>
+        </div>
+        
+        <!-- Absolute image -->
+        <img class="solar-system" src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/img/bg/solar.svg" alt="">
+    </footer>    <!-- Back To Top Button -->
+    <div x-data="initBackToTop()" x-on:scroll.window="scroll($event)" @click="goTop($event)" id="backtotop"><a href="javascript:" :class="{
+        'visible': scrolled,
+        '': !scrolled
+    }"></a></div>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://appsrv1-147a1.kxcdn.com/bulma-css-krypton/js/bundle.js"></script>
+
+</body>
+
+</html>
