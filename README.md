@@ -3,7 +3,7 @@
 
 [![N|Solid](https://res.cloudinary.com/practicaldev/image/fetch/s--uJjgTz8I--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8k73hi03ck8mnm830xpu.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--uJjgTz8I--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8k73hi03ck8mnm830xpu.png)
 
-50. Liseler Arası TÜBİTAK Projesi kapsamında hazırlamış olduğum akıllı kontrat (smart contract) temelli diploma alma - verme sistemidir.
+2204-A Lise Öğrencileri Araştırma Projeleri Yarışması kapsamında hazırlamış olduğum akıllı kontrat (smart contract) temelli diploma alma - verme sistemidir.
 
 - Merkeziyetsiz.
 - Değiştirilemez.
